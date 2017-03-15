@@ -1,0 +1,16 @@
+{% unless customer %}
+    {% if template contains 'customers' %}
+        {% assign send_to_login = false %}
+    {% else %}
+        {% assign send_to_login = true %}
+    {% endif %}
+{% endunless %}
+
+{% if send_to_login %}
+<meta content="0; url=/account/login?checkout_url=https://truairbrushmakeup.myshopify.com/collections/wholesale-items" http-equiv="refresh" />
+{% else %}
+
+
+/*  your colection code here*/
+
+{% endif %}
